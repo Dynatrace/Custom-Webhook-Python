@@ -1,0 +1,28 @@
+{
+	"dynatrace": {
+		"tenant": "https://xxxx.live.dynatrace.com",
+		"api_token": "XXXXXXXXX"
+	},
+	"webhook": {
+		"username": "dynatrace",
+		"password": "s3cr3t",
+		"interface": "0.0.0.0",
+		"port": 5000
+	},
+	"dir_received": "problems_received",
+	"dir_sent": "problems_sent",
+	"log_dir": "log",
+	"log_file": "webhook.log",
+	"incident_notification": {
+		"active": true,
+		"exec_win": "legacy_script.bat",
+		"exec_unix": "legacy_script.sh"
+	},
+	"sms_notification": {
+		"active": true,
+		"twilio_account":"XXXXXXXXXX9c768a1b03",
+		"twilio_token":"XXXXXXXXX8067df2b2deb697f7eed",
+		"twilio_number": "+1868888888",
+		"to_number": "+4915111111111"
+	}
+}

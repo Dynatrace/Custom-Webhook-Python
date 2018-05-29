@@ -1,0 +1,5 @@
+Flask_BasicAuth==0.2.0
+Flask==0.12.2
+Flask_Table==0.5.0
+twilio==6.10.0
+requests==2.18.4

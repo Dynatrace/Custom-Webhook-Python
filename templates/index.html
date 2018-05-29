@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+body {
+	background-color: black;
+    font: normal 12px Consolas, Arial, sans-serif;
+    color: white;
+}
+h1   {color:  #33a8ff ;}
+h2, h3 {
+    font-size: 14px;
+    color: white;
+}
+
+table, th, td {
+   border: 1px solid grey;
+   border-collapse: collapse; 
+   font: normal 10px Consolas, Arial, Monospace;
+   color: black;
+}
+
+th {
+    background-color:  #990000;
+    font-weight: bold;
+    color: white;
+}
+
+button {
+    background-color: #00b300;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+table {
+	width: 100%;
+    background-color: white;
+}
+
+tr:hover {
+	background-color: #cbfac6;
+}
+
+.flashes{
+	color: white;
+	font: normal 12px Consolas, Arial, sans-serif;
+}
+
+.usage {
+	color: #00FF00;
+	font: normal 12px Consolas, Arial, sans-serif;
+	display : none;
+}
+
+
+</style>
+<meta charset="utf-8">
+<link rel="icon" href="https://dt-cdn.net/images/favicon-32x32-32-26d70a5cff.png"> 
+<title>Dynatrace Custom Webhook Integration</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+function showHideById(divId) {
+    var x = document.getElementById(divId);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<div style="display: inline">
+    <h1>
+    <img src="https://dt-cdn.net/images/favicon-32x32-32-26d70a5cff.png" width="24"/>
+    	Dynatrace Custom Webhook Integration
+	<img src="https://www.python.org/static/favicon.ico" width="24"/> 
+    </h1>
+</div>
+
+
+<div class="flashes">
+  {% for message in get_flashed_messages() %}
+    {{ message }}
+  {% endfor %}
+</div>
+</br>
+</body>
+</html>

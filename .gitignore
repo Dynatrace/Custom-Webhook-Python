@@ -1,0 +1,4 @@
+log/**
+problems_received/*
+problems_sent/*
+*.back
