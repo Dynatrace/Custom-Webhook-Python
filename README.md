@@ -31,30 +31,30 @@ before running the Flask Web Microservice, we should configure some small things
 
 	{
 		"dynatrace": {
-			"tenant": "https://xxxxxxxx.live.dynatrace.com",		URL of Dynatrace SaaS or Managed
-			"api_token": "YOUR_API_TOKEN"							API Token for problem notifications
+			"tenant": "https://xxxxxxxx.live.dynatrace.com",	URL of Dynatrace SaaS or Managed
+			"api_token": "YOUR_API_TOKEN"				API Token for problem notifications
 		},
 		"webhook": {
-			"username": "dynatrace",								User for custom notification
-			"password": "s3cr3t",									Password for custom notification
-			"interface": "0.0.0.0",									Interface where the webhook should listen to. Default all interfaces. 
-			"port": 5000											Port where the webhook listens for communication.
+			"username": "dynatrace",		User for custom notification
+			"password": "s3cr3t",			Password for custom notification
+			"interface": "0.0.0.0",			Interface where the webhook should listen to. Default all interfaces. 
+			"port": 5000				Port where the webhook listens for communication.
 		},
-		"dir_received": "problems_received",						Folder to save the problems when received.
-		"dir_sent": "problems_sent",								Folder to save the problems details after being sent.
-		"log_dir": "log",											Log folder 	
-		"log_file": "webhook.log",									Log file
+		"dir_received": "problems_received",		Folder to save the problems when received.
+		"dir_sent": "problems_sent",			Folder to save the problems details after being sent.
+		"log_dir": "log",				Log folder 	
+		"log_file": "webhook.log",			Log file
 		"incident_notification": {						
-			"active": true,											Legacy notification flag. Default true (possible values true/false)
-			"exec_win": "legacy_script.bat",						Windows legacy executable (simulation). It can be also an .exe
-			"exec_unix": "legacy_script.sh"							Linux legacy executable (simulation). It can also be an .so
+			"active": true,				Legacy notification flag. Default true (possible values true/false)
+			"exec_win": "legacy_script.bat",	Windows legacy executable (simulation). It can be also an .exe
+			"exec_unix": "legacy_script.sh"		Linux legacy executable (simulation). It can also be an .so
 		},
 		"sms_notification": {
-			"active": false,										SMS notification (posible values true/false)
+			"active": false,					SMS notification (posible values true/false)
 			"twilio_account":"AC027e8af87e11d3f080bXXXXXXXXXXX",	Twilio Account
-			"twilio_token":"2e3070021e718067df2b2dXXXXXXXXXX",		Twilio API Token
-			"twilio_number": "+18652699XXX",						Twilio Number (sent from)
-			"to_number": "+49170XXXXXXX"							Number to notify (sent to)
+			"twilio_token":"2e3070021e718067df2b2dXXXXXXXXXX",	Twilio API Token
+			"twilio_number": "+18652699XXX",			Twilio Number (sent from)
+			"to_number": "+49170XXXXXXX"				Number to notify (sent to)
 		}
 	}
 
@@ -162,22 +162,22 @@ This sections describes the features and integrations.
 
 	└─ webhook
 		├─  doc
-		│	└── ...				Documentation folder with images.
-		├─  log					Folder for logging (specified in config.json)
-		│	└── webhook.log		Logging file 	   (specified in config.json)
+		│	└── ...			Documentation folder with images.
+		├─  log				Folder for logging (specified in config.json)
+		│	└── webhook.log		Logging file (specified in config.json)
 		│
-		├─  problems_received   Folder for saving the notifications as a JSON payload without preprocessing.
+		├─  problems_received   	Folder for saving the notifications as a JSON payload without preprocessing.
 		│	└── [0-9]-[STATE].json
 		├─	problems_sent		Folder for saving the notifications (problem_details) that were succesfully polled and submitted to the integrations. 
 		│      └── [0-9].json
 		├─	templates			
 		│		└── index.html	Flask rendering template for the Webhook webserver.
-		├─	config.json			Configurations file
+		├─	config.json		Configurations file
 		├─	legacy_script.bat	Legacy sample executable for Windows.
 		├─	legacy_script.sh	Legacy sample executable for Linux.
-		├─	README.md			this ReadMe file
+		├─	README.md		This ReadMe file
 		├─	requirements.txt	python project dependencies
-		└─	webhook.py			The custom Webhook application
+		└─	webhook.py		The custom Webhook application
 
 
 
