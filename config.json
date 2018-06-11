@@ -16,7 +16,7 @@
 	"incident_notification": {
 		"active": true,
 		"exec_win": "legacy_script.bat",
-		"exec_unix": "legacy_script.sh"
+		"exec_unix": "/bin/sh legacy_script.sh"
 	},
 	"sms_notification": {
 		"active": false,

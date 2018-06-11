@@ -118,7 +118,7 @@ def handle_post():
         
         # JSON Payload will be saved in a directory
         save_request(problem_simple)
-        if "TESTID" in problem_simple['ProblemID']:
+        if "999" in problem_simple['ProblemID']:
             logging.info('Test message successfully received. No integration will be called')
             return "OK"
         
