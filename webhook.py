@@ -95,6 +95,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 # Add logging also to the console of the running program
 logging.getLogger().addHandler(logging.StreamHandler())
+# Set Twilio logging to warning. 
+logging.getLogger("twilio").setLevel(logging.WARNING)
+
 
 # Initiate Flask Microservice with basic authentication
 app = Flask(__name__)
@@ -452,8 +455,9 @@ def call_sms_integration(problem_details):
     data['comment'] = "Mobile number has been notified: {0}".format(anonymize_numer(TO_NUMBER))
     data['user'] = WEBHOOK_USERNAME
     data['context'] = 'Twilio Custom Integration'
-    r = post_in_comments(problem_details, data);
-    
+    r = post_in_comments(problem_details, data)
+    # Log to the console
+    logging.info('{0}: {1} sent from {2}'.format(data['context'] , data['comment'], TWILIO_NUMBER))
     return
 
 def anonymize_numer(number):
