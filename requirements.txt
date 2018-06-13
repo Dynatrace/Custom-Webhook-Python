@@ -3,3 +3,5 @@ Flask==0.12.2
 Flask_Table==0.5.0
 twilio==6.10.0
 requests==2.18.4
+oneagent-sdk==1.0.0
+bottle==0.12.13
