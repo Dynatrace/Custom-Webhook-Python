@@ -1,5 +1,4 @@
-⚠️ This repository has been archived and is no longer maintained.
-The code is available for historical reference or archival purposes.
+> ⚠️ This repository is archived and no longer maintained. Dynatrace problem notifications are now handled via [Dynatrace Workflows](https://docs.dynatrace.com/docs/platform/workflows).
 
 # Custom Webhook for Dynatrace notifications
 
